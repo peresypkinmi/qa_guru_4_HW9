@@ -5,11 +5,11 @@ from selene.support.shared.jquery_style import s
 
 def test_github(open_browser):
     click_input()
-    enter_text('eroshenkoam/allure-example')
+    enter_text('peresypkinmi/qa_guru_4_HW9')
     submit_form()
-    go_to_link('eroshenkoam/allure-example')
+    go_to_link('peresypkinmi/qa_guru_4_HW9')
     go_to_issue()
-    assert_visible_text('#76')
+    assert_visible_text('#1')
 
 
 @allure.step("Клик по полю поиска")
@@ -19,7 +19,7 @@ def click_input():
 
 @allure.step("Ввод поискового запроса")
 def enter_text(text):
-    s(".header-search-input").send_keys(text)  # 'eroshenkoam/allure-example'
+    s(".header-search-input").send_keys(text)
 
 
 @allure.step("Отправка поискового запроса")
